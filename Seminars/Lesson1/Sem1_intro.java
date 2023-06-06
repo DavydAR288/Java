@@ -1,7 +1,9 @@
+package Seminars.Lesson1;
+
 import java.util.Random;
 import java.util.Scanner;
 
-public class Main {
+public class Sem1_intro {
 
     public static void main(String[] args) { // psvm сокращение, либо main
 
