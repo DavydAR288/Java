@@ -1,6 +1,7 @@
 package HW.Hw6;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Iterator;
 
 public class Hw6 {
     public static void main(String[] args) {
@@ -13,18 +14,21 @@ public class Hw6 {
         System.out.println(set1.size());
         System.out.println(set1.isEmpty());
 
-        System.out.println(set1.toString());
-
         Iterator<Integer> it = set1.iterator();
         while (it.hasNext()) {
             System.out.println(it.next());
         };
 
+        System.out.println(set1.toString());
+
+        System.out.println(set1.get(0));
+        System.out.println(set1.get(2));
+
     }
 }
 
 
-class Set<E>{
+class Set<E> {
     private HashMap<E, Object> set = new HashMap<>();
 
 
@@ -42,7 +46,7 @@ class Set<E>{
         return set.size();
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return set.isEmpty();
     }
 
@@ -60,12 +64,16 @@ class Set<E>{
         }
 
         if (set.size() > 0) {
-            sb.delete(sb.length() - 2, sb.length()); // удаление последней запятой и пробела
+            sb.delete(sb.length() - 2, sb.length());
         }
         sb.append("]");
         return sb.toString();
     }
 
-
-
+    public E get(int index) {
+        if (index < 0 || index >= set.size()) {
+            throw new IndexOutOfBoundsException();
+        }
+        return (E) set.get(index);
+    }
 }
