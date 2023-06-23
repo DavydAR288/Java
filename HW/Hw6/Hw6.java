@@ -6,6 +6,9 @@ public class Hw6 {
     public static void main(String[] args) {
         Set<Integer> set1 = new Set();
         System.out.println(set1.add(555));
+        System.out.println(set1.add(14));
+        System.out.println(set1.add(5));
+        System.out.println(set1.add(123));
         System.out.println(set1.remove(123));
         System.out.println(set1.size());
         System.out.println(set1.isEmpty());
