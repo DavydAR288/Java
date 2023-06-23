@@ -10,7 +10,7 @@ public class Hw6 {
         System.out.println(set1.size());
         System.out.println(set1.isEmpty());
 
-        System.out.println(set1.toStringg());
+        System.out.println(set1.toString());
 
         Iterator<Integer> it = set1.iterator();
         while (it.hasNext()) {
@@ -47,7 +47,7 @@ class Set<E>{
         return set.keySet().iterator();
     }
 
-    public String toStringg() {
+    public String toString() {
 
         StringBuilder sb = new StringBuilder();
         sb.append("[");
